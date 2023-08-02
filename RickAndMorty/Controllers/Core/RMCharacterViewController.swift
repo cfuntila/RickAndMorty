@@ -14,7 +14,17 @@ class RMCharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Characters"
-
+        let req = RMRequest(
+            endpoint: .character,
+            queryParameters: [
+                URLQueryItem(name: "name", value: "rick"),
+                URLQueryItem(name: "status", value: "alive")
+            ]
+        )
+        
+        print(req.url)
+        
+        
     }
     
 
